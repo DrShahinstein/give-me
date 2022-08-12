@@ -1,7 +1,7 @@
 """
 Json example
 {
-    "[representation_name]": "[something_to_copy]",
+    "[representing_name]": "[something_to_copy]",
     "ghtoken": "ghpLJOPŞjkGLugnlşou>KjKlmljh>"
     ...
 }
