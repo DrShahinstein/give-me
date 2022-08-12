@@ -4,7 +4,7 @@ A simple CLI tool helping users to copy what they need such as github tokens, go
 ## Installation
 ```
 poetry install
-poetry run python -m password_generator
+poetry run python -m cboard 
 ```
 
 ## Contribution
