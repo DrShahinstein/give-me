@@ -1,5 +1,5 @@
 # Password Generator
-A CLI tool helping users to copy what they need such as github tokens, google passwords and etc. 
+A simple CLI tool helping users to copy what they need such as github tokens, google passwords and etc. 
 
 ## Installation
 ```
