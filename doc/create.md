@@ -20,6 +20,7 @@
 
 ```
 $ cboard create ghtoken
+What do you want ghtoken to represent?: ghpLJOPŞjkGLugnlşou>KjKlmljh>
 `ghtoken` created successfully! 
 You can now `cboard copy ghtoken` it.
 ```
