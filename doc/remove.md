@@ -6,9 +6,9 @@
 
 **Options**
 
-| Option   | Description         |               |
-| -------- | ------------------- | ------------- |
-| `--help` | Shows the help menu | DEFAULT=False |
+| Option   | Description         |                 |
+| -------- | ------------------- | --------------- |
+| `--help` | Shows the help menu | `DEFAULT=False` |
 
 **Arguments**
 

@@ -6,14 +6,14 @@
 
 **Options**
 
-| Option   | Description         |               |
-| -------- | ------------------- | ------------- |
-| `--help` | Shows the help menu | DEFAULT=False |
+| Option   | Description         |                 |
+| -------- | ------------------- | --------------- |
+| `--help` | Shows the help menu | `DEFAULT=False` |
 
 **Arguments**
 
-| Argument            | Description                                                                 |
-| ------------------- | --------------------------------------------------------------------------- |
+| Argument            | Description                                                              |
+| ------------------- | ------------------------------------------------------------------------ |
 | `Representing Name` | A name representing what you are going to copy (ghtoken, googlepw, etc.) |
 
 **Example**
@@ -21,6 +21,6 @@
 ```
 $ cboard create ghtoken
 What do you want ghtoken to represent?: ghpLJOPŞjkGLugnlşou>KjKlmljh>
-`ghtoken` created successfully! 
+`ghtoken` created successfully!
 You can now `cboard copy ghtoken` it.
 ```
