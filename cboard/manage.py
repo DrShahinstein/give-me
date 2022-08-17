@@ -28,7 +28,7 @@ def create_new(representing_name, content):
     write_to_json(new_representation)
 
 
-def remove(representing_name):
+def delete(representing_name):
     write_to_json(pop=representing_name)
 
 
