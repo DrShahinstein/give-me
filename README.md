@@ -3,8 +3,13 @@ A simple CLI tool helping users to copy what they need such as github tokens, go
 
 ## Installation
 ```
-poetry install
-poetry run python -m cboard 
+$ poetry install
+$ poetry run python -m cboard 
+```
+
+## Build 
+```
+$ poetry build
 ```
 
 ## Contribution
