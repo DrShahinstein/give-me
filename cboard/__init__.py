@@ -13,9 +13,12 @@ def copy(representing_name):
     """Copy something you want to the clipboard."""
 
     content = get(representing_name)
-    clip.copy(content)
-
-    click.echo(f"{representing_name} copied!")
+    
+    if content is None:
+        click.echo(f"`{representing_name}` not found.")
+    else:
+        clip.copy(content)
+        click.echo(f"{representing_name} copied!")
 
 
 @cli.command()
