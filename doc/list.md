@@ -14,7 +14,7 @@
 **Example**
 
 ```
-$ cboard list --no-private
+$ cboard list 
 ⸱ ghtoken: *** 
 ⸱ googlepw: ****
 ⸱ my_note: **** **** **** ** * ***** ***
