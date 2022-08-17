@@ -13,7 +13,7 @@ def write_to_json(new_data=None, pop=None, path=JSON_PATH):
         if new_data is not None:
             f_content_as_dict.update(new_data)
         if pop is not None:
-            print(f_content_as_dict.pop(pop, "Not Found"))
+            del f_content_as_dict[pop]
 
         f.seek(0)
         json.dump(f_content_as_dict, f, indent=4)
