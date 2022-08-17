@@ -15,16 +15,16 @@
 
 ```
 $ cboard list --no-private
-ghtoken: *** 
-googlepw: ****
-my_note: **** **** **** ** * ***** ***
+⸱ ghtoken: *** 
+⸱ googlepw: ****
+⸱ my_note: **** **** **** ** * ***** ***
 ```
 
 ---
 
 ```
 $ cboard list --no-private
-ghtoken: 123
-googlepw: 3215
-my_note: Star this repo if I liked it.
+⸱ ghtoken: 123
+⸱ googlepw: 3215
+⸱ my_note: Star this repo if I liked it.
 ```
