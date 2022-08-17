@@ -39,9 +39,12 @@ def create(representing_name):
 def remove(representing_name):
     """Delete a representation representing what you are going to copy."""
 
-    remove(representing_name)
+    if get(representing_name) is not None:
+        remove(representing_name)
+        click.echo(f"`{representing_name}` removed successfully!")
 
-    click.echo(f"`{representing_name}` removed successfully!")
+    else:
+        click.echo(f"`{representing_name}` not found.")
 
 
 @cli.command()
