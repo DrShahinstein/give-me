@@ -1,6 +1,6 @@
 import click
 import pyperclip as clip
-from .manage import create_new, get, remove
+from .manage import create_new, get, delete
 from .utils import hide, zip_json
 
 
@@ -40,7 +40,7 @@ def remove(representing_name):
     """Delete a representation representing what you are going to copy."""
 
     if get(representing_name) is not None:
-        remove(representing_name)
+        delete(representing_name)
         click.echo(f"`{representing_name}` removed successfully!")
 
     else:
