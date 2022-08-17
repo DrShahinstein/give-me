@@ -20,7 +20,7 @@ def copy(name):
 @cli.command()
 @click.argument("name")
 def create(name):
-    """Create a new representation which represents what you are going to copy."""
+    """Create a new representation representing what you are going to copy."""
 
     text = click.prompt(f"What do you want {name} to represent?")
     # TODO: Create a new representation.
