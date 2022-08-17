@@ -24,12 +24,13 @@ def create_json(path=JSON_PATH):
         f.write("{}")
 
 
-def hide(content):
-    pass
+def hide(content: str):
+    space = ' '
+    return "".join(list(map(lambda char: '*' if not char == space else space, content)))
 
 
 def zip_json():
-    with open(JSON_PATH, "r") as f: 
+    with open(JSON_PATH, "r") as f:
         f_content = json.load(f)
         keys = f_content.keys()
         values = f_content.values()
