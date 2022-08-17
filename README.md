@@ -1,16 +1,25 @@
 # Password Generator
-A simple CLI tool helping users to copy what they need such as github tokens, google passwords and etc. 
+A simple CLI tool helping users to copy what they need such as github tokens, google passwords and etc.
+
+
+## Requirements
+- [poetry](https://www.poetryfoundation.org/)
+
 
 ## Installation
 ```
+$ git clone https://github.com/1TaylanOzturk/cboard.git
+$ cd cboard/
 $ poetry install
-$ poetry run python -m cboard 
+$ poetry run python3 -m cboard [OPTIONS] [ARGUMENTS]
 ```
 
-## Build 
+
+## Build
 ```
 $ poetry build
 ```
+
 
 ## Contribution
 PRs are always welcome.
