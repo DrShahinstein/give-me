@@ -37,7 +37,7 @@ def remove(representing_name):
 def get(representing_name):
     with open(JSON_PATH, "r") as f:
         content = json.load(f)
-        return content[representing_name]
+        return content.get(representing_name, None)
 
 
 def write_to_json(new_representation=None, pop=None, path=JSON_PATH):
