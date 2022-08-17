@@ -14,7 +14,7 @@
 
 | Argument            | Description                                                                 |
 | ------------------- | --------------------------------------------------------------------------- |
-| `Representing Name` | A name that represents what you are going to copy (ghtoken, googlepw, etc.) |
+| `Representing Name` | A name representing what you are going to copy (ghtoken, googlepw, etc.) |
 
 **Example**
 
