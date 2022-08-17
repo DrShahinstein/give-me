@@ -1,6 +1,7 @@
 import click
 import pyperclip as clip
-from .representations import create_new, get, remove
+from .manage import create_new, get, remove
+from .utils import hide, zip_json
 
 
 @click.group()
@@ -13,7 +14,7 @@ def copy(representing_name):
     """Copy something you want to the clipboard."""
 
     content = get(representing_name)
-    
+
     if content is None:
         click.echo(f"`{representing_name}` not found.")
     else:
@@ -41,6 +42,20 @@ def remove(representing_name):
     remove(representing_name)
 
     click.echo(f"`{representing_name}` removed successfully!")
+
+
+@cli.command()
+@click.option("--private/--no-private", is_flag=True, default=True)
+def list(private):
+    """List the entire representations with their contents privately or non-privately."""
+
+    if private:
+        for representation, content in zip_json():
+            click.echo(f"⸱ {representation}: {hide(content)}")
+
+    else:
+        for representation, content in zip_json():
+            click.echo(f"⸱ {representation}: {content}")
 
 
 def main():
