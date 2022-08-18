@@ -2,15 +2,14 @@
 Json example
 {
     "[representing_name]": "[something_to_copy]",
-    "ghtoken": "ghpLJOPŞjkGLugnlşou>KjKlmljh>"
+    "ghtoken": "ghpLJOPSjkGLugnlsou>KjKlmljh>"
     ...
 }
 """
 
 
-import json
 import os
-from .utils import write_to_json, create_json, ROOT_DIR, JSON_PATH
+from .utils import pop, get_dict_from_json, write_to_json, create_json, ROOT_DIR, JSON_PATH
 
 
 def create_new(representing_name, content):
@@ -29,10 +28,9 @@ def create_new(representing_name, content):
 
 
 def delete(representing_name):
-    write_to_json(pop=representing_name)
+    pop(representing_name)
 
 
 def get(representing_name):
-    with open(JSON_PATH, "r") as f:
-        f_content = json.load(f)
-        return f_content.get(representing_name, None)
+    json_content = get_dict_from_json()
+    return json_content.get(representing_name, None)
