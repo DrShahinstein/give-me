@@ -48,7 +48,7 @@ def remove(representing_name):
 
 
 @cli.command()
-@click.option("--private/--no-private", is_flag=True, default=True)
+@click.option("--private/--no-private", is_flag=True, default=False)
 def list(private):
     """List the entire representations with their contents privately or non-privately."""
 
