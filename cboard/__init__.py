@@ -1,7 +1,7 @@
 import click
 import pyperclip as clip
 from .manage import create_new, get, delete
-from .utils import hide, zip_json, is_zip_empty
+from .utils import hide, zip_json, is_empty
 
 
 @click.group()
@@ -53,12 +53,15 @@ def list(private):
     """List the entire representations with their contents privately or non-privately."""
 
     z_json = zip_json()
+    empty = is_empty(zip_json())
 
-    if is_zip_empty(z_json):
-        click.echo("⸱ Not any representations")
-    if private:
+    if empty:
+        click.echo("⸱ Not any representation.")
+
+    elif private:
         for representation, content in z_json:
             click.echo(f"⸱ {representation}: {hide(content)}")
+
     else:
         for representation, content in z_json:
             click.echo(f"⸱ {representation}: {content}")
