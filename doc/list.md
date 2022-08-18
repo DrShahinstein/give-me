@@ -9,13 +9,13 @@
 | Option      | Description                        |                 |
 | ----------- | ---------------------------------- | --------------- |
 | `--help`    | Shows the help menu                | `DEFAULT=False` |
-| `--private` | Keeps the contents private/visible | `DEFAULT=True`  |
+| `--private` | Keeps the contents private/visible | `DEFAULT=False` |
 
 **Example**
 
 ```
-$ cboard list 
-⸱ ghtoken: *** 
+$ cboard list
+⸱ ghtoken: ***
 ⸱ googlepw: ****
 ⸱ my_note: **** **** **** ** * ***** ***
 ```
