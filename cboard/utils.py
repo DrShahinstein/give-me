@@ -42,9 +42,10 @@ def zip_json():
     return zip(keys, values)
 
 
-def is_zip_empty(i):
+# Checks whether a zip object is empty or not.
+def is_empty(zip):
     try:
-        next(i)
+        next(zip)
         return False
     except StopIteration:
         return True
