@@ -4,7 +4,7 @@ A simple CLI tool helping users to copy what they need such as github tokens, go
 ---
 
 ## Requirements
-- [poetry](https://www.poetryfoundation.org/)
+- [poetry](https://python-poetry.org/)
 
 ---
 
