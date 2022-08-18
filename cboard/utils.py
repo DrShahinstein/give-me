@@ -6,22 +6,28 @@ ROOT_DIR = Path(os.environ['HOME']) / ".representations"
 JSON_PATH = ROOT_DIR / "index.json"
 
 
-def write_to_json(new_data=None, pop=None, path=JSON_PATH):
-    with open(path, "r+", encoding="UTF-8") as f:
-        f_content_as_dict = json.load(f)
+def write_to_json(new_data, path=JSON_PATH):
+    json_content = get_dict_from_json()
+    json_content.update(new_data)
+    with open(path, "w", encoding="UTF-8") as f:
+        json.dump(json_content, f, indent=4)
 
-        if new_data is not None:
-            f_content_as_dict.update(new_data)
-        if pop is not None:
-            del f_content_as_dict[pop]
 
-        f.seek(0)
-        json.dump(f_content_as_dict, f, indent=4)
+def pop(representing_name, path=JSON_PATH):
+    json_content = get_dict_from_json()
+    json_content.pop(representing_name)
+    with open(path, "w", encoding="UTF-8") as f:
+        json.dump(json_content, f, indent=4)
 
 
 def create_json(path=JSON_PATH):
     with open(path, "w") as f:
         f.write("{}")
+
+
+def get_dict_from_json(path=JSON_PATH):
+    with open(path, "r") as f:
+        return json.load(f)
 
 
 def hide(content: str):
@@ -30,8 +36,15 @@ def hide(content: str):
 
 
 def zip_json():
-    with open(JSON_PATH, "r") as f:
-        f_content = json.load(f)
-        keys = f_content.keys()
-        values = f_content.values()
-        return zip(keys, values)
+    json_content = get_dict_from_json()
+    keys = json_content.keys()
+    values = json_content.values()
+    return zip(keys, values)
+
+
+def is_zip_empty(i):
+    try:
+        next(i)
+        return False
+    except StopIteration:
+        return True
