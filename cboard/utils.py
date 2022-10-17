@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 
-ROOT_DIR = Path(os.environ['HOME']) / ".representations"
+ROOT_DIR = Path(os.environ['HOME']) / ".config" / ".pairs"
 JSON_PATH = ROOT_DIR / "index.json"
 
 
@@ -13,9 +13,9 @@ def write_to_json(new_data, path=JSON_PATH):
         json.dump(json_content, f, indent=4)
 
 
-def pop(representing_name, path=JSON_PATH):
+def pop(pair_name, path=JSON_PATH):
     json_content = get_dict_from_json()
-    json_content.pop(representing_name)
+    json_content.pop(pair_name)
     with open(path, "w", encoding="UTF-8") as f:
         json.dump(json_content, f, indent=4)
 
