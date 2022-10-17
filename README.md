@@ -25,7 +25,11 @@ $ poetry run python3 -m cboard [OPTIONS] [ARGUMENTS]
 
 ```bash
 $ poetry build
-[dist] pip3 install
+[dist]$ pip3 install cboard-0.1.0-py3-none-any.whl
+```
+
+```
+$ python3 -m cboard [...]
 ```
 
 ---
