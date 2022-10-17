@@ -9,62 +9,62 @@ def cli(): pass
 
 
 @cli.command()
-@click.argument("representing_name")
-def copy(representing_name):
+@click.argument("pair_name")
+def copy(pair_name):
     """Copy something you want to the clipboard."""
 
-    content = get(representing_name)
+    content = get(pair_name)
 
     if content is None:
-        click.echo(f"`{representing_name}` not found.")
+        click.echo(f"`{pair_name}` not found.")
     else:
         clip.copy(content)
-        click.echo(f"{representing_name} copied!")
+        click.echo(f"{pair_name} copied!")
 
 
 @cli.command()
-@click.argument("representing_name")
-def create(representing_name):
-    """Create a new representation representing what you are going to copy."""
+@click.argument("pair_name")
+def create(pair_name):
+    """Create a new pair."""
 
-    content = click.prompt(f"What do you want {representing_name} to represent?")
-    create_new(representing_name, content)
+    content = click.prompt(f"What do you want {pair_name} to represent?")
+    create_new(pair_name, content)
 
-    click.echo(f"`{representing_name}` created successfully!")
-    click.echo(f"You can now `cboard copy {representing_name}` it.")
+    click.echo(f"`{pair_name}` created successfully!")
+    click.echo(f"You can now `cboard copy {pair_name}` it.")
 
 
 @cli.command()
-@click.argument("representing_name")
-def remove(representing_name):
-    """Delete a representation representing what you are going to copy."""
+@click.argument("pair_name")
+def remove(pair_name):
+    """Delete a pair."""
 
-    if get(representing_name) is not None:
-        delete(representing_name)
-        click.echo(f"`{representing_name}` removed successfully!")
+    if get(pair_name) is not None:
+        delete(pair_name)
+        click.echo(f"`{pair_name}` removed successfully!")
 
     else:
-        click.echo(f"`{representing_name}` not found.")
+        click.echo(f"`{pair_name}` not found.")
 
 
 @cli.command()
 @click.option("--private/--no-private", is_flag=True, default=False)
 def list(private):
-    """List the entire representations with their contents privately or non-privately."""
+    """List all pairs."""
 
     z_json = zip_json()
     empty = is_empty(zip_json())
 
     if empty:
-        click.echo("⸱ Not any representation.")
+        click.echo("⸱ Not any pair.")
 
     elif private:
-        for representation, content in z_json:
-            click.echo(f"⸱ {representation}: {hide(content)}")
+        for pair, value in z_json:
+            click.echo(f"⸱ {pair}: {hide(value)}")
 
     else:
-        for representation, content in z_json:
-            click.echo(f"⸱ {representation}: {content}")
+        for pair, value in z_json:
+            click.echo(f"⸱ {pair}: {value}")
 
 
 def main():
