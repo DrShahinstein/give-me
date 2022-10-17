@@ -1,6 +1,6 @@
 ## Copy
 
-<p>Create a new representation which represents what you are going to copy.</p>
+<p>Create a new pair that represents what you are going to copy.</p>
 
 **Command**: `cboard create [OPTIONS] [ARGUMENTS]`
 

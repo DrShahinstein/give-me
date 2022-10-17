@@ -1,6 +1,6 @@
 ## List
 
-<p>List the entire representations with their contents privately or non-privately.</p>
+<p>List all pairs with their contents privately or non-privately.</p>
 
 **Command**: `cboard list [OPTIONS]`
 

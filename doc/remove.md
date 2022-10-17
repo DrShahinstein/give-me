@@ -1,6 +1,6 @@
 ## Remove
 
-<p>Delete a representation representing what you are going to copy.</p>
+<p>Delete a pair representing what you are going to copy.</p>
 
 **Command**: `cboard remove [OPTIONS] [ARGUMENTS]`
 
