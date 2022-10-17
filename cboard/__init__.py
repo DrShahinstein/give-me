@@ -16,7 +16,7 @@ def copy(pair_name):
     content = get(pair_name)
 
     if content is None:
-        click.echo(f"`{pair_name}` not found.")
+        click.echo(f"{pair_name} not found.")
     else:
         clip.copy(content)
         pair_name = click.style(pair_name, fg="bright_red")
@@ -32,8 +32,8 @@ def create(pair_name):
     create_new(pair_name, content)
 
     pair_name = click.style(pair_name, fg="bright_red")
-    click.echo(f"`{pair_name}` created successfully!")
-    click.echo(f"You can now `cboard copy {pair_name}` it.")
+    click.echo(f"{pair_name} created successfully!")
+    click.echo(f"You can now cboard copy {pair_name} it.")
 
 
 @cli.command()
@@ -44,11 +44,11 @@ def remove(pair_name):
     if get(pair_name) is not None:
         delete(pair_name)
         pair_name = click.style(pair_name, fg="bright_red")
-        click.echo(f"`{pair_name}` removed successfully!")
+        click.echo(f"{pair_name} removed successfully!")
 
     else:
         pair_name = click.style(pair_name, fg="bright_red")
-        click.echo(f"`{pair_name}` not found.")
+        click.echo(f"{pair_name} not found.")
 
 
 @cli.command()
