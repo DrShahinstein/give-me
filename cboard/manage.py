@@ -9,7 +9,7 @@ Json example
 
 
 import os
-from .utils import pop, get_dict_from_json, write_to_json, create_json, ROOT_DIR, JSON_PATH
+from .utils import get_dict_from_json, write_to_json, create_json, ROOT_DIR, JSON_PATH
 
 
 def create_new(name, content):
