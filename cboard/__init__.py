@@ -19,7 +19,7 @@ def copy(pair):
         click.echo(f"{pair} not found.")
     else:
         clip.copy(content)
-        pair = click.style(pair, fg="bright_red")
+        pair = click.style(pair, fg="yellow")
         click.echo(f"{pair} copied!")
 
 
@@ -31,9 +31,10 @@ def create(pair):
     content = click.prompt(f"What do you want {pair} to represent?")
     create_new(pair, content)
 
-    pair = click.style(pair, fg="bright_red")
-    click.echo(f"{pair} created successfully!")
-    click.echo(f"You can now cboard copy {pair} it.")
+    colorized_pair = click.style(pair, fg="yellow")
+    colorized_command = click.style(f"cboard copy {pair}", fg="yellow")
+    click.echo(f"{colorized_pair} created successfully!")
+    click.echo(f"You can now {colorized_command} it.")
 
 
 @cli.command()
@@ -43,11 +44,11 @@ def remove(pair):
 
     if get(pair) is not None:
         pop(pair)
-        pair = click.style(pair, fg="bright_red")
+        pair = click.style(pair, fg="yellow")
         click.echo(f"{pair} removed successfully!")
 
     else:
-        pair = click.style(pair, fg="bright_red")
+        pair = click.style(pair, fg="yellow")
         click.echo(f"{pair} not found.")
 
 
