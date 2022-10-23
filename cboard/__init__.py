@@ -70,7 +70,8 @@ def list(private):
 
     else:
         for pair, value in z_json:
-            click.echo(f"⸱ {pair}: {value}")
+            yellow_pair = click.style(f"{pair}", fg="yellow")
+            click.echo(f"⸱ {yellow_pair}: {value}")
 
 
 def main():
