@@ -29,7 +29,7 @@ $ poetry build
 ```
 
 ```
-$ python3 -m cboard [...]
+$ python3 -m cboard [OPTIONS] [ARGUMENTS]
 ```
 
 ---
@@ -38,35 +38,35 @@ $ python3 -m cboard [...]
 
 First, let's create a new pair.
 
-```bash
+```
 $ poetry run python3 -m cboard create github_password
 What do you want github_password to represent?: MY_GITHUB_PASSWORD
 github_password created successfully!
-You can now cboard copy github_password it.
+You can now cboard copy github_password it. # The command here shows up with a yellow color in the terminal
 ```
 
 Let's see how it shows up in the list.
 
-```bash
+```
 $ poetry run python3 -m cboard list
 ⸱ github_password: MY_GITHUB_PASSWORD
 ```
 
 Well, let's try to copy `github_password` to the clipboard. After that, you will be able to CTRL+V this.
 
-```bash
+```
 $ poetry run python3 -m cboard copy github_password
-github_password copied!
+github_password copied! # The pair name here shows up with a yellow color in the terminal
 ```
 
 Now, let's see how removing a pair works.
 
-```bash
+```
 $ poetry run python3 -m cboard remove github_password
-github_password removed successfully!
+github_password removed successfully! # The pair name here shows up with a yellow color in the terminal
 ```
 
-```bash
+```
 $  poetry run python3 -m cboard list
 ⸱ Not any pair.
 ```
