@@ -9,46 +9,46 @@ def cli(): pass
 
 
 @cli.command()
-@click.argument("pair_name")
-def copy(pair_name):
+@click.argument("pair")
+def copy(pair):
     """Copy something you want to the clipboard."""
 
-    content = get(pair_name)
+    content = get(pair)
 
     if content is None:
-        click.echo(f"{pair_name} not found.")
+        click.echo(f"{pair} not found.")
     else:
         clip.copy(content)
-        pair_name = click.style(pair_name, fg="bright_red")
-        click.echo(f"{pair_name} copied!")
+        pair = click.style(pair, fg="bright_red")
+        click.echo(f"{pair} copied!")
 
 
 @cli.command()
-@click.argument("pair_name")
-def create(pair_name):
+@click.argument("pair")
+def create(pair):
     """Create a new pair."""
 
-    content = click.prompt(f"What do you want {pair_name} to represent?")
-    create_new(pair_name, content)
+    content = click.prompt(f"What do you want {pair} to represent?")
+    create_new(pair, content)
 
-    pair_name = click.style(pair_name, fg="bright_red")
-    click.echo(f"{pair_name} created successfully!")
-    click.echo(f"You can now cboard copy {pair_name} it.")
+    pair = click.style(pair, fg="bright_red")
+    click.echo(f"{pair} created successfully!")
+    click.echo(f"You can now cboard copy {pair} it.")
 
 
 @cli.command()
-@click.argument("pair_name")
-def remove(pair_name):
+@click.argument("pair")
+def remove(pair):
     """Delete a pair."""
 
-    if get(pair_name) is not None:
-        delete(pair_name)
-        pair_name = click.style(pair_name, fg="bright_red")
-        click.echo(f"{pair_name} removed successfully!")
+    if get(pair) is not None:
+        delete(pair)
+        pair = click.style(pair, fg="bright_red")
+        click.echo(f"{pair} removed successfully!")
 
     else:
-        pair_name = click.style(pair_name, fg="bright_red")
-        click.echo(f"{pair_name} not found.")
+        pair = click.style(pair, fg="bright_red")
+        click.echo(f"{pair} not found.")
 
 
 @cli.command()
