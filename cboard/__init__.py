@@ -1,7 +1,7 @@
 import click
 import pyperclip as clip
-from .manage import create_new, get, delete
-from .utils import hide, zip_json, is_empty
+from .manage import create_new, get
+from .utils import hide, zip_json, is_empty, pop
 
 
 @click.group()
@@ -42,7 +42,7 @@ def remove(pair):
     """Delete a pair."""
 
     if get(pair) is not None:
-        delete(pair)
+        pop(pair)
         pair = click.style(pair, fg="bright_red")
         click.echo(f"{pair} removed successfully!")
 
