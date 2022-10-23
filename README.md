@@ -49,7 +49,7 @@ Let's see how it shows up in the list.
 
 ```
 $ poetry run python3 -m cboard list
-⸱ github_password: MY_GITHUB_PASSWORD
+⸱ github_password: MY_GITHUB_PASSWORD # The pair name here shows up with a yellow color in the terminal
 ```
 
 Well, let's try to copy `github_password` to the clipboard. After that, you will be able to CTRL+V this.
