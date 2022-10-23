@@ -65,7 +65,8 @@ def list(private):
 
     elif private:
         for pair, value in z_json:
-            click.echo(f"⸱ {pair}: {hide(value)}")
+            yellow_pair = click.style(f"{pair}", fg="yellow")
+            click.echo(f"⸱ {yellow_pair}: {hide(value)}")
 
     else:
         for pair, value in z_json:
