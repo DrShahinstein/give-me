@@ -27,10 +27,6 @@ def create_new(name, content):
     write_to_json(pair)
 
 
-def delete(name):
-    pop(name)
-
-
 def get(name):
     json_content = get_dict_from_json()
     return json_content.get(name, None)
