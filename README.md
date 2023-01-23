@@ -29,7 +29,7 @@ $ poetry build
 ```
 
 ```
-$ python3 -m cboard [OPTIONS] [ARGUMENTS]
+$ cboard [OPTIONS] [ARGUMENTS]
 ```
 
 ---
