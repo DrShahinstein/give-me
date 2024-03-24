@@ -1,6 +1,6 @@
-# Password Generator
+# give-me
 
-A simple CLI tool helping users to copy what they need such as github tokens, google passwords and etc.
+A simple CLI program to help copy-pasting.
 
 ---
 
@@ -13,10 +13,10 @@ A simple CLI tool helping users to copy what they need such as github tokens, go
 ## Installation
 
 ```bash
-$ git clone https://github.com/1TaylanOzturk/cboard.git
-$ cd cboard/
+$ git clone https://github.com/DrShahinstein/give-me.git
+$ cd give-me/
 $ poetry install
-$ poetry run python3 -m cboard [OPTIONS] [ARGUMENTS]
+$ poetry run python -m give_me [OPTIONS] [ARGUMENTS]
 ```
 
 ---
@@ -25,48 +25,57 @@ $ poetry run python3 -m cboard [OPTIONS] [ARGUMENTS]
 
 ```bash
 $ poetry build
-[dist]$ pip3 install cboard-0.1.0-py3-none-any.whl
+$ cd dist/
+[dist]$ pip install give_me-0.1.0-py3-none-any.whl
 ```
 
 ```
-$ cboard [OPTIONS] [ARGUMENTS]
+$ give_me [password_name | any_command]
 ```
 
 ---
 
 ## Usage
 
-First, let's create a new pair.
+First, let's create a new password.
 
 ```
-$ poetry run python3 -m cboard create github_password
-What do you want github_password to represent?: MY_GITHUB_PASSWORD
-github_password created successfully!
-You can now cboard copy github_password it. # The command here shows up with a yellow color in the terminal
+$ poetry run python -m give_me create
+Enter the name for your password: my_google_password
+Password: # this is being typed out in here privately as it is a password
+my_google_password created successfully!
+You can now `give-me my_google_password` it
 ```
 
 Let's see how it shows up in the list.
 
 ```
-$ poetry run python3 -m cboard list
-⸱ github_password: MY_GITHUB_PASSWORD # The pair name here shows up with a yellow color in the terminal
+$ poetry run python -m give_me list
+=> my_google_password: ***
 ```
 
-Well, let's try to copy `github_password` to the clipboard. After that, you will be able to CTRL+V this.
-
+If you'd like to view passwords visibly, add `--no-private` option
 ```
-$ poetry run python3 -m cboard copy github_password
-github_password copied! # The pair name here shows up with a yellow color in the terminal
-```
-
-Now, let's see how removing a pair works.
-
-```
-$ poetry run python3 -m cboard remove github_password
-github_password removed successfully! # The pair name here shows up with a yellow color in the terminal
+$ poetry run python -m give_me --no-private list
+=> my_google_password: 123
 ```
 
+Well, let's try to copy `my_google_password` to the clipboard.
+
 ```
-$  poetry run python3 -m cboard list
-⸱ Not any pair.
+$ poetry run python -m give-me my_google_password
+'github_password' copied!
+```
+
+Now, let's see how removing a password works.
+
+```
+$ poetry run python -m give-me remove
+Enter the name for your password to be removed: my_google_password
+`my_google_password` removed successfully!
+```
+
+```
+$  poetry run python -m give-me list
+* No password available
 ```
