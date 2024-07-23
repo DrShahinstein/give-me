@@ -1,18 +1,14 @@
 [tool.poetry]
 name = "give-me"
 version = "0.1.0"
-description = "Command line tool to copy-paste stuff"
+description = "password manager"
 authors = ["DrShahinstein <1taylanozturk@protonmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pyperclip = "^1.8.2"
-click = "^8.1.7"
+argparse = "^1.4.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-give_me = 'give_me:main'
