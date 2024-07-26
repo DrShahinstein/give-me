@@ -1,14 +1,21 @@
 import argparse
 from give_me.src.manager import PasswordManager
+from give_me.src.help import HELP_TEXT
 
 
 COMMANDS = ["create", "edit", "list", "remove"]
+
+
+class CustomFormatter(argparse.RawTextHelpFormatter):
+    def format_help(self):
+        return HELP_TEXT
 
 
 def run():
     parser = argparse.ArgumentParser(
         prog="give_me",
         description="CLI program to help with password management",
+        formatter_class=CustomFormatter
     )
 
     parser.add_argument("command_or_password_name", help="Command or the name of the password to copy")
