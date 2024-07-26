@@ -9,6 +9,7 @@ readme = "README.md"
 python       = "^3.10"
 argparse     = "^1.4.0"
 cryptography = "^43.0.0"
+pyperclip    = "^1.9.0"
 
 [build-system]
 requires = ["poetry-core"]
