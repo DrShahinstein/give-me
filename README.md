@@ -81,6 +81,8 @@ ghtoken: ****************************************
 ### Sample Encrypted Json:
 ```json
 {
-"ghtoken": "gAAAAABmpBB06T2wIzftP5x4lF6-O8JbpHdcYPtnZiYeCY8j9JFdqpFe5QcpVPXsaD8lIcwwFe-RR44mEvZb_rpLbHqK_S4SD83HMe5PMLurklmCtrhbOBg5Zkf2wi-87BYa4IOx5WXU", "anyother": "gAAAAABmpBB0XSOCIeAZmrg0bgaQMugVlQtOwt-VlBoRMSS7CvoD1PrKN1K45sHPJD6wNKB7wsWjzvdyO_Z-qInTeQllr1-04w==", "anyotherother": "gAAAAABmpBB0pNVDRIL7-KSGjnm9nSmX7MTl6WBvKjK5zhfdUIMuA7_usCb8eoFn1BPiosO4pLPJl-PqQdDdAfDvuFkvLfRsew=="
+  "ghtoken": "gAAAAABmpBB06T2wIzftP5x4lF6-O8JbpHdcYPtnZiYeCY8j9JFdqpFe5QcpVPXsaD8lIcwwFe-RR44mEvZb_rpLbHqK_S4SD83HMe5PMLurklmCtrhbOBg5Zkf2wi-87BYa4IOx5WXU",
+  "anyother": "gAAAAABmpBB0XSOCIeAZmrg0bgaQMugVlQtOwt-VlBoRMSS7CvoD1PrKN1K45sHPJD6wNKB7wsWjzvdyO_Z-qInTeQllr1-04w==",
+  "anyotherother": "gAAAAABmpBB0pNVDRIL7-KSGjnm9nSmX7MTl6WBvKjK5zhfdUIMuA7_usCb8eoFn1BPiosO4pLPJl-PqQdDdAfDvuFkvLfRsew=="
 }
 ```
